@@ -1,0 +1,22 @@
+{
+  "name": "gridsome",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/source-wordpress": "^0.5.3",
+    "animejs": "^3.2.0",
+    "cloudinary-vue": "^1.1.1",
+    "flexboxgrid-sass": "^8.0.5",
+    "gridsome": "^0.7.0",
+    "node-sass": "^4.14.1",
+    "normalize.css": "^8.0.1",
+    "sass-loader": "^10.0.0"
+  },
+  "devDependencies": {
+    "vue-cli-plugin-cloudinary": "~0.0.6"
+  }
+}
