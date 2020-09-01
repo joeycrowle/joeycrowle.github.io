@@ -37,6 +37,15 @@ export default {
     .content {
       display: flex;
       flex: 1;
+
+      aside {
+        min-width: 30%;
+        padding-right: 5%;
+      }
+
+      main {
+        min-width: 65%;
+      }
     }
   }
 

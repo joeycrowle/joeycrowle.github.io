@@ -4,9 +4,7 @@
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
       <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-        <g-link v-for="{node} in $static.allWordPressPage.edges" :key="node.id" class="nav__link" :to="node.path">{{node.title}}</g-link>
+        <g-link v-for="{node} in $static.allWordPressPost.edges" :key="node.id" class="nav__link" :to="node.path">{{node.title}}</g-link>
       </nav>
     </header>
 </template>
@@ -26,6 +24,16 @@ query {
       }
     }
   }
+
+  allWordPressPost {
+    edges {
+      node {
+        title
+        path
+        id
+      }
+    }
+  }
 }
 </static-query>
 
@@ -35,15 +43,22 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .header {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  ///align-items: center;
   padding: 30px 0;
+
+ nav {
+   display: flex;
+   flex-direction: column;
+   margin-top: 30px;;
+ }
 }
 
 .nav__link {
-  margin-left: 20px;
+
 }
 </style>

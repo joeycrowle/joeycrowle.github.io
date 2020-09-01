@@ -20,6 +20,7 @@
           path
           featuredMedia {
             sourceUrl
+            altText
           }
         }
       }

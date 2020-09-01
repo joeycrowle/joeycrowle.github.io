@@ -5,7 +5,9 @@
               <g-link :to="post.path">
                 <cld-image 
                   :publicId="this.$getPublicId(post.featuredMedia.sourceUrl)"
+                  :alt="post.featuredMedia.altText"
                   fetchFormat="auto"
+                  
                   responsive
                   >
                  </cld-image>
